@@ -47,4 +47,29 @@
       }
     };
   }
+
+  //stack의 예
+  const resursive = (data) => {
+    if (data < 0) {
+      console.log("ended");
+    } else {
+      console.log(data);
+      resursive(data - 1);
+      console.log("returned", data);
+    }
+  };
+
+  resursive(4);
+  /**
+  4
+3
+2
+1
+0
+'returned' 0
+'returned' 1
+'returned' 2
+'returned' 3
+'returned' 4
+ */
 }
