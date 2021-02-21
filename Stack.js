@@ -38,7 +38,6 @@
     peek = () => this.stack[this.stack.length - 1];
 
     clear = () => {
-      this.top = -1;
       this.stack = [];
     };
 
