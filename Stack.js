@@ -28,7 +28,7 @@
         //스택이 차있는 경우
         let popEl = this.stack[this.stack.length - 1];
         this.stack = this.stack.slice(0, this.stack.length - 1);
-        this.top--;
+        this.stack.length--;
         return popEl;
       }
     };
