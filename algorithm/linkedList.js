@@ -126,9 +126,25 @@ class LinkedList {
     }
     console.log(str);
   }
+
+  reverseList() {
+    let current = this.head;
+    let previous = null;
+
+    while (current) {
+      let tmp = current.next;
+      current.next = previous;
+      previous = current;
+      current = tmp;
+    }
+    return previous;
+  }
 }
 
 const list = new LinkedList();
+list.add(1);
+list.add(2);
 list.add(3);
+list.add(4);
 list.add(5);
-list.insertAt(11, 1);
+console.log(list.reverseList());
